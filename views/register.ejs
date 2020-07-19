@@ -1,0 +1,38 @@
+<%- include ('partials/header') %>
+
+<div class="section-form">
+  <div class="form">
+    <form action="/register" method="post">
+      <ul>
+        <li>
+          <h1 class="form-head">Please Sign Up</h1>
+        </li>
+        <hr class="hr-style" />
+        <li>
+          <input
+            class="form-input"
+            type="text"
+            name="username"
+            placeholder="Username"
+            required
+          />
+        </li>
+        <li>
+          <input
+            class="form-input"
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+        </li>
+      </ul>
+      <button class="btn" type="submit">Sign Up</button>
+    </form>
+    <div>
+      <a href="/hotels">Go Back</a>
+    </div>
+  </div>
+</div>
+
+<%- include ('partials/footer') %>

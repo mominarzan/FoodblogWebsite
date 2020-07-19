@@ -1,0 +1,35 @@
+<%- include ('../partials/header') %>
+
+<div class="section-form">
+  <div class="form">
+    <form action="/hotels/<%= hotel._id %>?_method=PUT" method="POST">
+      <ul>
+        <li>
+          <h1 class="form-head">Create a New hotel</h1>
+        </li>
+        <hr class="hr-style" />
+        <li>
+          <input class="form-input" type="text" name="hotel[name]" value="<%= hotel.name %>" />
+        </li>
+        <li>
+          <input class="form-input" type="text" name="hotel[price]" value="<%= hotel.price%>" />
+        </li>
+        <li>
+          <input class="form-input" type="text" name="hotel[img]" value="<%= hotel.image %>" />
+        </li>
+        <li>
+          <input class="form-input" type="text" name="hotel[description]" value="<%= hotel.description %>" />
+        </li>
+        <li>
+          <input class="form-input" type="text" name="hotel[location]" value="<%= hotel.address %>" />
+        </li>
+      </ul>
+      <button class="btn" type="submit">Edit Hotel</button>
+    </form>
+    <div class="mb-3">
+      <a href="/hotels">Go Back</a>
+    </div>
+  </div>
+</div>
+
+<%- include ('../partials/footer') %>

@@ -1,0 +1,23 @@
+<%- include ('../partials/header') %>
+
+<div class="section-form">
+  <div class="form">
+    <form action="/hotels/<%= hotel_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+      <ul>
+        <li>
+          <h1 class="form-head">Edit Review</h1>
+        </li>
+        <hr class="hr-style" />
+        <li>
+          <input class="form-input" type="text" name="comment[text]" value="<%= comment.text %>" />
+        </li>
+      </ul>
+      <button class="btn" type="submit">Edit Review</button>
+    </form>
+    <div>
+      <a href="/hotels">Go Back</a>
+    </div>
+  </div>
+</div>
+
+<%- include ('../partials/footer') %>

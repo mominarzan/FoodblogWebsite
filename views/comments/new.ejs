@@ -1,0 +1,23 @@
+<%- include ('../partials/header') %>
+
+<div class="section-form">
+  <div class="form">
+    <form action="/hotels/<%= hotel._id %>/comments" method="POST">
+      <ul>
+        <li>
+          <h1 class="form-head">Add a Review</h1>
+        </li>
+        <hr class="hr-style" />
+        <li>
+          <input class="form-input" type="text" name="comment[text]" placeholder="Review Goes Here" />
+        </li>
+      </ul>
+      <button class="btn" type="submit">Add Review</button>
+    </form>
+    <div>
+      <a href="/hotels">Go Back</a>
+    </div>
+  </div>
+</div>
+
+<%- include ('../partials/footer') %>

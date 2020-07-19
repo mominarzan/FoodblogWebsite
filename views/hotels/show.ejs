@@ -1,0 +1,56 @@
+<%- include ('../partials/header') %>
+
+<div class="section-show">
+  <div class="show">
+    <div class="show-details">
+      <h1><a><%=hotel.name%></a></h1>
+      <h2 class="pull-right">$<%= hotel.price %> for 1 person (approx)</h2>
+      <p><%= hotel.description %></p>
+    </div>
+    <div>
+      <div class="show-body">
+        <img class="img-responsive" src="<%= hotel.image %>" />
+        <p>
+          <em>Submitted By <%= hotel.author.username %></em>
+        </p>
+        <% if(currentUser && hotel.author.id.equals(currentUser._id)){ %>
+        <div class="show-buttons">
+          <a class="btn" href="/hotels/<%= hotel._id %>/edit">Edit</a>
+          <form id="delete-form" action="/hotels/<%= hotel._id %>?_method=DELETE" method="POST">
+            <button class="btn">Delete</button>
+          </form>
+        </div>
+        <% }%>
+      </div>
+
+      <div>
+        <a class="btn" href="/hotels/<%= hotel._id %>/comments/new">Add Review</a>
+      </div>
+
+      <hr />
+
+      <div class="comments">
+        <% hotel.comments.forEach(function(comment){ %>
+        <div class="comment-details">
+          <strong><%= comment.author.username %></strong>
+          <p>
+            <%= comment.text %>
+          </p>
+        </div>
+        <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+        <div class="comment">
+          <a class="btn-small" href="/hotels/<%=hotel._id %>/comments/<%=comment._id %>/edit">Edit</a>
+          <form id="delete-form" action="/hotels/<%=hotel._id %>/comments/<%=comment._id %>?_method=DELETE"
+            method="POST">
+            <input type="submit" class="btn-small" value="Delete" />
+          </form>
+        </div>
+        <% } %>
+        <% }) %>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<%- include ('../partials/footer') %>

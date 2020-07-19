@@ -1,0 +1,34 @@
+<%- include ('../partials/header') %>
+
+<!-- Showcase + Overlay -->
+<section class="section-head">
+  <div class="overlay">
+    <div class="section-head-inner">
+      <h1>QuickBites</h1>
+      <p>
+        Explore Best of top restaurants, cafes in India, based on trends.
+        You can add your experience by sign up or see the latest food hotels 
+        in and around your city
+      </p>
+      <p>
+        <a class="btn" href="/hotels/new">Add New hotel</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="card-container">
+  <div class="section-grid">
+    <% hotels.forEach(function(hotel){ %>
+    <div class="card">
+      <img src="<%= hotel.image %>" />
+      <div class="content">
+        <h4><%= hotel.name %></h4>
+        <a href="/hotels/<%= hotel._id %>" class="btn-small">More Info</a>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+</section>
+
+<%- include ('../partials/footer') %>

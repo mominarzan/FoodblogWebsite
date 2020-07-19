@@ -1,0 +1,35 @@
+<%- include ('../partials/header') %>
+
+<div class="section-form">
+  <div class="form">
+    <form action="/hotels" method="POST">
+      <ul>
+        <li>
+          <h1 class="form-head">Create a New hotel</h1>
+        </li>
+        <hr class="hr-style" />
+        <li>
+          <input class="form-input" type="text" name="name" placeholder="Name" />
+        </li>
+        <li>
+          <input class="form-input" type="text" name="price" placeholder="Price" />
+        </li>
+        <li>
+          <input class="form-input" type="text" name="img" placeholder="Img Url (Landscape)" />
+        </li>
+        <li>
+          <input class="form-input" type="text" name="description" placeholder="Description" />
+        </li>
+        <li>
+          <input class="form-input" type="text" name="location" placeholder="Location" />
+        </li>
+      </ul>
+      <button class="btn" type="submit">Add Hotel</button>
+    </form>
+    <div class="mb-3">
+      <a href="/hotels">Go Back</a>
+    </div>
+  </div>
+</div>
+
+<%- include ('../partials/footer') %>
