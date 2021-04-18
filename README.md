@@ -6,18 +6,16 @@
 ## Built with
 
 > Node.js
-> Passport.js
 > Express
+> CSS 
+> Tailwind/bootstrap
+> HTML
+> JAVASCRIPT
 > Mongoose
 > MongoDB
-> Fash
-> CSS GRID
-> HTML/JAVASCRIPT
-> EJS
+> Embedded Javascript
 
 ## Features
-1) User Authentication with passport.js
-2) User Authorization
-3) CRUD (Create Read Update Destroy)
-4) Responsive Web Design
+Responsive Web Design, User Authentication, User Authorization, simple operation
+
 
